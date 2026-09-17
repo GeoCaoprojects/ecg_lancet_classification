@@ -1,5 +1,5 @@
 # ecg_lancet_classification
-1 Article:
+1 Article
 
 Attia, Zachi I., Peter A. Noseworthy, Francisco Lopez-Jimenez, Samuel J. Asirvatham, Abhishek J. Deshmukh, Bernard J. Gersh, Rickey E. Carter et al. "An artificial intelligence-enabled ECG algorithm for the identification of patients with atrial fibrillation during sinus rhythm: a retrospective analysis of outcome prediction." The Lancet 394, no. 10201 (2019): 861-867.
 
