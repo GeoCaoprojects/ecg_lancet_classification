@@ -47,7 +47,7 @@ Step 4: Load the trained model and run testing using attia_ecg_load_and_test_v1.
 
 Step 5: Calculate and evaluate test performance metrics using attia_test_performance.py.
 
-#python attia_test_performance.py 
---testing-results ~/path/rattia_kfold_testing_results.xlsx 
---demograph ~/path/ptb/ptb_scp_diag_simplified.csv 
+#python attia_test_performance.py \
+--testing-results ~/path/rattia_kfold_testing_results.xlsx \
+--demograph ~/path/ptb/ptb_scp_diag_simplified.csv \
 --output ~/path/output_analysis.xlsx
