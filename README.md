@@ -9,6 +9,7 @@ This code package for ECG classification includes modules for:
 3) Test performance calculation and metrics reporting
 
 3 Implementation Steps
+
 Step 1: Download the code package and extract the archive.
 
 Step 2: Extract the dataset archive (records100.zip).
