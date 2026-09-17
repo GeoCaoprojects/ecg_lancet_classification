@@ -19,7 +19,7 @@ Step 2: Extract the dataset archive (records100.zip).
 
 Step 3: Train the model by running attia_ecg_training_v1.py.
 
-#python ~/projects/04cv/code/attia_ecg_training_v2.py \
+#python attia_ecg_training_v2.py \
 --demograph-path ~/projects/04cv/data/ptb/ptb_scp_diag_simplified.csv \
 --data-path ~/projects/04cv/data/ptb/ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.1 \
 --batch-size 100 \
