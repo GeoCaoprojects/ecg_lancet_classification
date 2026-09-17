@@ -14,9 +14,9 @@ import pandas as pd
 from sklearn.metrics import accuracy_score, confusion_matrix, roc_auc_score
 
 # default arguments
-DEFAULT_TESTING_RESULTS_PATH = "~/Documents/projects/04cv/results/ptb/attia/attia_kfold_testing_results.xlsx"
-DEFAULT_DEMOGRAPH_PATH = "~/Documents/projects/04cv/results/ptb/attia/ptb_scp_diag_simplified.csv"
-DEFAULT_OUTPUT_DIR = "~/Documents/projects/04cv/results/ptb/attia/attia_testing_demographic_analysis.xlsx"
+DEFAULT_TESTING_RESULTS_PATH = "~/path/ptb/attia_kfold_testing_results.xlsx"
+DEFAULT_DEMOGRAPH_PATH = "~/path/ptb/ptb_scp_diag_simplified.csv"
+DEFAULT_OUTPUT_DIR = "~/path/attia_testing_demographic_analysis.xlsx"
 
 WEIGHT_SOURCE_UNIT = "lb"
 WEIGHT_BIN_SIZE_LB = 20.0
@@ -850,7 +850,7 @@ def write_excel(
 
 
 def main():
-    # 解析命令行参数
+    # argument
     parser = argparse.ArgumentParser(description="ECG Demographic Analysis and Plotting Tool")
     parser.add_argument(
         "--testing-results",
