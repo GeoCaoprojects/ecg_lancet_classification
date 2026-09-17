@@ -1,6 +1,9 @@
 '''
 commandline:
-#python your_script.py --testing-results ~/path/results.xlsx --demograph ~/path/ptb/ptb_scp_diag_simplified.csv --output ~/path/attia_testing_demographic_analysis.xlsx
+#python your_script.py \
+--testing-results ~/path/attia_kfold_testing_results.xlsx \
+--demograph ~/path/ptb/ptb_scp_diag_simplified.csv \
+--output ~/path/attia_testing_demographic_analysis.xlsx
 '''
 
 from __future__ import annotations
@@ -14,7 +17,7 @@ import pandas as pd
 from sklearn.metrics import accuracy_score, confusion_matrix, roc_auc_score
 
 # default arguments
-DEFAULT_TESTING_RESULTS_PATH = "~/path/ptb/attia_kfold_testing_results.xlsx"
+DEFAULT_TESTING_RESULTS_PATH = "~/path/attia_kfold_testing_results.xlsx"
 DEFAULT_DEMOGRAPH_PATH = "~/path/ptb/ptb_scp_diag_simplified.csv"
 DEFAULT_OUTPUT_DIR = "~/path/attia_testing_demographic_analysis.xlsx"
 
