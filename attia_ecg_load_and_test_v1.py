@@ -3,10 +3,10 @@ Command-line example:
 
 python attia_ecg_load_and_test_v1.py \
     --device cuda:1 \
-    --kfold-data-path ~/projects/04cv/code/attia_kfold_scheme.pt \
-    --checkpoint-dir ~/projects/04cv/code/attia_checkpoints \
-    --result-path ~/projects/04cv/code/attia_post_training_test_results.pt \
-    --excel-result-path ~/projects/04cv/code/attia_post_training_test_results.xlsx \
+    --kfold-data-path ~/path/attia_kfold_scheme.pt \
+    --checkpoint-dir ~/path/attia_checkpoints \
+    --result-path ~/path/attia_post_training_test_results.pt \
+    --excel-result-path ~/path/attia_post_training_test_results.xlsx \
     --positive-label 1 \
     --batch-size 100 \
     --num-workers 0
@@ -236,28 +236,28 @@ def main():
     parser.add_argument(
         "--kfold-data-path",
         type=str,
-        default="~/projects/04cv/code/attia_kfold_scheme.pt",
+        default="~/path/attia_kfold_scheme.pt",
         help="Path to the saved k-fold data scheme.",
     )
 
     parser.add_argument(
         "--checkpoint-dir",
         type=str,
-        default="~/projects/04cv/code/attia_checkpoints",
+        default="~/path/attia_checkpoints",
         help="Directory containing fold_X_best.pt checkpoints.",
     )
 
     parser.add_argument(
         "--result-path",
         type=str,
-        default="~/projects/04cv/code/attia_post_training_test_results.pt",
+        default="~/path/attia_post_training_test_results.pt",
         help="Path for the post-training testing .pt result.",
     )
 
     parser.add_argument(
         "--excel-result-path",
         type=str,
-        default="~/projects/04cv/code/attia_post_training_test_results.xlsx",
+        default="~/path/attia_post_training_test_results.xlsx",
         help="Path for the post-training testing Excel result.",
     )
 
