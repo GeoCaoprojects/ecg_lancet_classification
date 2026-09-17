@@ -1,18 +1,18 @@
 """
 Command-line example:
 
-#python ~/projects/04cv/code/attia_ecg_training_v2.py \
---demograph-path ~/projects/04cv/data/ptb/ptb_scp_diag_simplified.csv \
---data-path ~/projects/04cv/data/ptb/ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.1 \
---batch-size 100 \
---max-epochs 100 \
---learning-rate 1e-3 \
---weight-decay 0.0 \
---patience 8 \
---device cuda:2 \
---checkpoint-dir ~/projects/04cv/code/attia_checkpoints \
---result-path ~/projects/04cv/code/attia_kfold_results.pt \
---excel-result-path ~/projects/04cv/code/attia_kfold_testing_results.xlsx \
+#python attia_ecg_training_v2.py
+--demograph-path ~/path/ptb/ptb_scp_diag_simplified.csv
+--data-path ~/path/ptb/ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.1
+--batch-size 100
+--max-epochs 100
+--learning-rate 1e-3
+--weight-decay 0.0
+--patience 8
+--device cuda:2
+--checkpoint-dir ~/path/attia_checkpoints
+--result-path ~/path/attia_kfold_results.pt
+--excel-result-path ~/path/attia_kfold_testing_results.xlsx
 --positive-label 1
 """
 
@@ -92,8 +92,8 @@ class datamanager:
 
     def __init__(
         self,
-        demograph_path="/home/m253461/projects/04cv/data/ptb/ptb_scp_diag_simplifed.csv",
-        data_path="/home/m253461/projects/04cv/data/ptb/ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.1",
+        demograph_path="~/path/ptb/ptb_scp_diag_simplifed.csv",
+        data_path="~/path/ptb/ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.1",
         kfold=5,
     ):
         self.demograph_path = demograph_path
@@ -1100,7 +1100,7 @@ def summarize_fold_results(fold_results, confidence_level=0.95):
 
 def export_testing_results_to_excel(
     fold_results,
-    excel_path="/home/m253461/projects/04cv/code/attia_kfold_testing_results.xlsx",
+    excel_path="~/path/attia_kfold_testing_results.xlsx",
 ):
     """Export all testing ECG results to five Excel worksheets, one per fold."""
     workbook = Workbook()
@@ -1356,17 +1356,17 @@ if __name__ == "__main__":
         )
     )
 
-    parser.add_argument("--demograph-path", type=str, default="/home/m253461/projects/04cv/data/ptb/ptb_scp_diag_simplified.csv")
-    parser.add_argument("--data-path", type=str, default="/home/m253461/projects/04cv/data/ptb/ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.1")
+    parser.add_argument("--demograph-path", type=str, default="~/path/ptb/ptb_scp_diag_simplified.csv")
+    parser.add_argument("--data-path", type=str, default="~/path/ptb/ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.1")
     parser.add_argument("--batch-size", type=int, default=100)
     parser.add_argument("--max-epochs", type=int, default=100)
     parser.add_argument("--learning-rate", type=float, default=1e-3)
     parser.add_argument("--weight-decay", type=float, default=0.0)
     parser.add_argument("--patience", type=int, default=8)
     parser.add_argument("--device", type=str, default="cuda:2")
-    parser.add_argument("--checkpoint-dir", type=str, default="/home/m253461/projects/04cv/code/attia_checkpoints")
-    parser.add_argument("--result-path", type=str, default="/home/m253461/projects/04cv/code/attia_kfold_results.pt")
-    parser.add_argument("--excel-result-path", type=str, default="/home/m253461/projects/04cv/code/attia_kfold_testing_results.xlsx")
+    parser.add_argument("--checkpoint-dir", type=str, default="~/path/attia_checkpoints")
+    parser.add_argument("--result-path", type=str, default="~/path/attia_kfold_results.pt")
+    parser.add_argument("--excel-result-path", type=str, default="~/path/attia_kfold_testing_results.xlsx")
     parser.add_argument("--positive-label", type=int, default=1)
     parser.add_argument("--kfold", type=int, default=5)
     parser.add_argument("--load-workers", type=int, default=64)
