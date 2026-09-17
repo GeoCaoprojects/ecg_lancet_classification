@@ -4,6 +4,7 @@
 Attia, Zachi I., Peter A. Noseworthy, Francisco Lopez-Jimenez, Samuel J. Asirvatham, Abhishek J. Deshmukh, Bernard J. Gersh, Rickey E. Carter et al. "An artificial intelligence-enabled ECG algorithm for the identification of patients with atrial fibrillation during sinus rhythm: a retrospective analysis of outcome prediction." The Lancet 394, no. 10201 (2019): 861-867.
 
 2 Overview
+
 This code package for ECG classification includes modules for:
 1) Model training, validation, and testing
 2) Model loading and inference evaluation
