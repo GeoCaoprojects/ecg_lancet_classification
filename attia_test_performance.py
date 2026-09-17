@@ -569,7 +569,7 @@ def show_cross_fold_age_weight_histograms(
         rect=(0, 0, 1, 0.97)
     )
 
-    # 保存图片
+    # save image
     save_figure(fig, fig_title, output_dir)
 
     return fig
@@ -645,7 +645,7 @@ def show_gender_histograms_all_folds(
         rect=(0, 0, 1, 0.97)
     )
     
-    # 保存图片
+    # save image
     save_figure(fig, fig_title, output_dir)
     
     return fig
