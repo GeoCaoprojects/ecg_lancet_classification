@@ -1,6 +1,6 @@
 '''
 commandline:
-#python your_script.py --testing-results ./path/results.xlsx --demograph ./path/demograph.csv --output ./path/output_analysis.xlsx
+#python your_script.py --testing-results ~/path/results.xlsx --demograph ~/path/ptb/ptb_scp_diag_simplified.csv --output ~/path/attia_testing_demographic_analysis.xlsx
 '''
 
 from __future__ import annotations
