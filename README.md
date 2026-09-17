@@ -19,6 +19,40 @@ Step 2: Extract the dataset archive (records100.zip).
 
 Step 3: Train the model by running attia_ecg_training_v1.py.
 
+#python ~/projects/04cv/code/attia_ecg_training_v2.py \
+--demograph-path ~/projects/04cv/data/ptb/ptb_scp_diag_simplified.csv \
+--data-path ~/projects/04cv/data/ptb/ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.1 \
+--batch-size 100 \
+--max-epochs 100 \
+--learning-rate 1e-3 \
+--weight-decay 0.0 \
+--patience 8 \
+--device cuda:2 \
+--checkpoint-dir ~/projects/04cv/code/attia_checkpoints \
+--result-path ~/projects/04cv/code/attia_kfold_results.pt \
+--excel-result-path ~/projects/04cv/code/attia_kfold_testing_results.xlsx \
+--positive-label 1
+
 Step 4: Load the trained model and run testing using attia_ecg_load_and_test_v1.py.
 
+#python attia_ecg_load_and_test_v1.py \
+    --device cuda:2 \
+    --kfold-data-path ~/projects/04cv/code/attia_kfold_scheme.pt \
+    --checkpoint-dir ~/projects/04cv/code/attia_checkpoints \
+    --result-path ~/projects/04cv/code/attia_post_training_test_results.pt \
+    --excel-result-path ~/projects/04cv/code/attia_post_training_test_results.xlsx \
+    --positive-label 1 \
+    --batch-size 100 \
+    --num-workers 0
+
 Step 5: Calculate and evaluate test performance metrics using attia_test_performance.py.
+
+#python attia_ecg_load_and_test_v1.py \
+    --device cuda:1 \
+    --kfold-data-path ~/projects/04cv/code/attia_kfold_scheme.pt \
+    --checkpoint-dir ~/projects/04cv/code/attia_checkpoints \
+    --result-path ~/projects/04cv/code/attia_post_training_test_results.pt \
+    --excel-result-path ~/projects/04cv/code/attia_post_training_test_results.xlsx \
+    --positive-label 1 \
+    --batch-size 100 \
+    --num-workers 0
